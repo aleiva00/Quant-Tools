@@ -48,3 +48,31 @@ The GARCH model is formally defined as:
 **Common Criteria for Parameter Selection**:
 - Observe the autocorrelation and partial autocorrelation functions (ACF and PACF) of the squared returns to identify potential values of *p* and *q*.
 - Use information criteria like AIC and BIC to select the model with the best trade-off between fit and complexity.
+
+
+
+## 6. Example
+
+```python
+# # Import libraries
+
+import yfinance as yf
+import pandas as pd
+from arch import arch_model
+import matplotlib.pyplot as plt
+from itertools import product
+
+# Select stock and date range
+stock_symbol = 'AAPL'
+start_date = '2020-01-01'
+end_date = '2023-08-30'
+
+# Fetch the stock data from Yahoo Finance API
+stock_data = yf.download(stock_symbol, start=start_date, end=end_date)
+
+# Calculate daily returns
+stock_data['Returns'] = stock_data['Adj Close'].pct_change().dropna()
+
+# Create a df to run the model (deleting nans)
+df_returns = stock_data['Returns'].dropna()
+
