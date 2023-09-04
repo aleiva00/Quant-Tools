@@ -16,7 +16,7 @@
 
 GARCH is used when analyzing financial data with clustered volatility, where periods of high volatility are followed by periods of low volatility. It's valuable for risk management, option pricing, and understanding market dynamics.
 
-## 4. Mathematical Definition (with Intuitive Explanation)
+## 4. Mathematical Definition
 
 The GARCH model is formally defined as:
 
@@ -35,7 +35,7 @@ The GARCH model is formally defined as:
 - **&beta;**: The GARCH parameter that measures the impact of past conditional variances on current volatility.
 - **z<sub>t</sub>**: A white noise error term.
 
-**Intuitive Explanation**: GARCH models the conditional variance &sigma;<sub>t</sub><sup>2</sup> as a combination of a constant term (&omega;), the impact of past squared returns (ARCH effect), and the impact of past conditional variances (GARCH effect). This helps capture volatility clustering, where periods of high volatility tend to be followed by similar periods.
+**Explanation**: GARCH models the conditional variance &sigma;<sub>t</sub><sup>2</sup> as a combination of a constant term (&omega;), the impact of past squared returns (ARCH effect), and the impact of past conditional variances (GARCH effect). This helps capture volatility clustering, where periods of high volatility tend to be followed by similar periods.
 
 ## 5. Choosing p and q Parameters
 
