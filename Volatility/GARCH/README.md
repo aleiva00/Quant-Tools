@@ -20,14 +20,17 @@ GARCH is used when analyzing financial data with clustered volatility, where per
 
 The GARCH model is formally defined as:
 
-```latex
+$$
+
 \[
 \begin{align*}
 y_t &= \mu + \epsilon_t \\
 \epsilon_t &= \sigma_t \cdot z_t \\
 \sigma^2_t &= \omega + \alpha \cdot \epsilon^2_{t-1} + \beta \cdot \sigma^2_{t-1}
 \end{align*}
-\]
+\] 
+
+$$
 
 
 $y_t$: The financial return at time t.
@@ -53,4 +56,5 @@ Intuition: It represents how many past conditional variances are considered. Lar
 Common Criteria for Parameter Selection:
 
 Observe the autocorrelation and partial autocorrelation functions (ACF and PACF) of the squared returns to identify potential values of p and q.
+
 Use information criteria like AIC and BIC to select the model with the best trade-off between fit and complexity.
