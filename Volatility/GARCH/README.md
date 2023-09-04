@@ -20,41 +20,31 @@ GARCH is used when analyzing financial data with clustered volatility, where per
 
 The GARCH model is formally defined as:
 
-$$
+**y<sub>t</sub> = &mu; + &epsilon;<sub>t</sub>**
 
-\[
-\begin{align*}
-y_t &= \mu + \epsilon_t \\
-\epsilon_t &= \sigma_t \cdot z_t \\
-\sigma^2_t &= \omega + \alpha \cdot \epsilon^2_{t-1} + \beta \cdot \sigma^2_{t-1}
-\end{align*}
-\] 
+**&epsilon;<sub>t</sub> = &sigma;<sub>t</sub> * z<sub>t</sub>**
 
-$$
+**&sigma;<sub>t</sub><sup>2</sup> = &omega; + &alpha; * &epsilon;<sub>t-1</sub><sup>2</sup> + &beta; * &sigma;<sub>t-1</sub><sup>2</sup>**
 
+- **y<sub>t</sub>**: The financial return at time *t*.
+- **&mu;**: The mean return.
+- **&epsilon;<sub>t</sub>**: The standardized error term.
+- **&sigma;<sub>t</sub><sup>2</sup>**: The conditional variance (volatility) at time *t*.
+- **&omega;**: The constant term.
+- **&alpha;**: The ARCH parameter that measures the impact of past squared returns on current volatility.
+- **&beta;**: The GARCH parameter that measures the impact of past conditional variances on current volatility.
+- **z<sub>t</sub>**: A white noise error term.
 
-$y_t$: The financial return at time t.
-$\mu$: The mean return.
-$\epsilon_t$: The standardized error term.
-$\sigma_t^2$: The conditional variance (volatility) at time t.
-$\omega$: The constant term.
-$\alpha$: The ARCH parameter that measures the impact of past squared returns on current volatility.
-$\beta$: The GARCH parameter that measures the impact of past conditional variances on current volatility.
-$z_t$: A white noise error term.
+**Intuitive Explanation**: GARCH models the conditional variance &sigma;<sub>t</sub><sup>2</sup> as a combination of a constant term (&omega;), the impact of past squared returns (ARCH effect), and the impact of past conditional variances (GARCH effect). This helps capture volatility clustering, where periods of high volatility tend to be followed by similar periods.
 
+## 5. Choosing p and q Parameters
 
-Intuitive Explanation: GARCH models the conditional variance $\sigma_t^2$ as a combination of a constant term ($\omega$), the impact of past squared returns (ARCH effect), and the impact of past conditional variances (GARCH effect). This helps capture volatility clustering, where periods of high volatility tend to be followed by similar periods.
+- **p Parameter**: The order of the ARCH term.
+  - *Intuition*: It represents how many past squared returns are considered in modeling volatility. Larger *p* captures longer memory effects in volatility.
 
+- **q Parameter**: The order of the GARCH term.
+  - *Intuition*: It represents how many past conditional variances are considered. Larger *q* captures longer-lasting volatility persistence.
 
-##5. Choosing p and q Parameters
-$p$ Parameter: The order of the ARCH term.
-
-Intuition: It represents how many past squared returns are considered in modeling volatility. Larger p captures longer memory effects in volatility.
-$q$ Parameter: The order of the GARCH term.
-
-Intuition: It represents how many past conditional variances are considered. Larger q captures longer-lasting volatility persistence.
-Common Criteria for Parameter Selection:
-
-Observe the autocorrelation and partial autocorrelation functions (ACF and PACF) of the squared returns to identify potential values of p and q.
-
-Use information criteria like AIC and BIC to select the model with the best trade-off between fit and complexity.
+**Common Criteria for Parameter Selection**:
+- Observe the autocorrelation and partial autocorrelation functions (ACF and PACF) of the squared returns to identify potential values of *p* and *q*.
+- Use information criteria like AIC and BIC to select the model with the best trade-off between fit and complexity.
