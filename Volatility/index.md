@@ -43,21 +43,3 @@ Below, you'll find the primary modeling techniques commonly employed in the indu
 | Implied Volatility                                      | To estimate future volatility based on option prices and market expectations.                                    | Assumes that option prices reflect market expectations of future volatility.                                | 1. Provides market-driven estimates of future volatility. 2. Useful for pricing options and assessing market sentiment.                                                       | 1. Relies on efficient options markets. 2. May not always accurately predict future volatility.                                                        | Black, F., & Scholes, M. (1973). The pricing of options and corporate liabilities. The Journal of Political Economy, 81(3), 637-654. |
 | Moving Average Volatility                               | To smooth out price data and estimate volatility based on moving averages.                                      | Assumes that volatility can be estimated by smoothing recent price movements.                               | 1. Simple and easy to understand. 2. Provides a smooth representation of volatility.                                                                                       | 1. May lag behind rapid changes in volatility. 2. Sensitive to the choice of the moving average window.                                        | N/A                                                        |
 
-
-
-
-
-
-# GARCH: Generalized Autoregressive model with conditional heteroscedasticity
-
-Description of the technique.
-
-## Steps
-
-1. Step one.
-2. Step two.
-
-## Code Example
-
-```python
-# Your Python code here
