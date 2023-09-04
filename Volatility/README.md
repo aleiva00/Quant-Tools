@@ -1,6 +1,34 @@
 # Volatility Models
 
-Understanding and accurately modeling volatility is crucial in financial analysis and risk management. Volatility, which measures the degree of price variability, serves as a key indicator of market dynamics. Correctly capturing volatility patterns allows investors and analysts to make informed decisions about asset allocation, risk assessment, and option pricing. It's vital for estimating the potential impact of market events and managing investment portfolios effectively. Additionally, studying volatility helps uncover valuable insights into market behavior, providing a deeper understanding of how and why asset prices fluctuate. By mastering volatility analysis, individuals and organizations can navigate financial markets with greater confidence and precision, ultimately enhancing their ability to make sound investment choices and manage financial risk.
+##### What is volatility?
+Volatility is like the "rockiness" or "wildness" of a financial or market ride. It tells you how much prices or values tend to swing up and down over time. High volatility means the ride is bumpy with big swings, like a roller coaster. Low volatility means it's a smoother ride, like a calm river. Understanding volatility helps you anticipate how much risk or excitement there might be in your financial journey.
+
+##### Why is it important to measure it correctly?
+Understanding and accurately modeling volatility is crucial in financial analysis and risk management. Correctly capturing volatility patterns allows investors and analysts to make informed decisions about asset allocation, risk assessment, and option pricing. It's vital for estimating the potential impact of market events and managing investment portfolios effectively. Additionally, studying volatility helps uncover valuable insights into market behavior, providing a deeper understanding of how and why asset prices fluctuate. 
+
+##### Why is it difficult to model volatility?
+*Inherent noise in market data
+*Rapidly changing volatility levels
+*Choice of measurement methods
+*Non-linear asset behaviors
+*Unpredictability of extreme market events
+
+##### What is non linear behavior?
+
+In a formal sense, non-linearity refers to a mathematical relationship between variables that does not adhere to the principles of linearity. A relationship between variables is considered linear when it satisfies the following properties:
+
+Additivity: If you have two variables, A and B, and you're studying their relationship in the form Y = f(A, B), the relationship is considered linear if changes in A and B together result in a change in Y that is equal to the sum of the changes when A and B are considered separately.
+
+Homogeneity of Degree 1: This means that if you scale one of the variables (let's say A) by a constant factor (k), the effect on Y is proportional to that scaling factor. In mathematical terms, it means that f(kA, B) = kf(A, B).
+
+In contrast, a relationship is considered non-linear when it violates one or both of these properties. In a non-linear relationship, the effects of changes in the variables are not additive, or they don't scale linearly with changes in one or more variables.
+
+For example, the equation Y = A^2 is non-linear because doubling the value of A does not double the value of Y. Similarly, the equation Y = A * B is non-linear because the effect of A and B together is not simply the sum of their individual effects.
+
+Non-linear relationships can take various forms, such as quadratic, exponential, logarithmic, or trigonometric functions, and they are often encountered in real-world data where linear models are inadequate for capturing the underlying patterns.
+
+
+##### Then, what is the best way to model volatility?
 
 Below, you'll find the primary modeling techniques commonly employed in the industry:
 
