@@ -1,4 +1,4 @@
 # Quant-Tools
-Tools to deploy quant methods. Highly based in time-series methods. 
+Personal notes on tools to deploy quant methods; main definitions and "plug and play" code. Mostly methods on time-series. 
 
 - [**Volatility Modeling**](./Volatility/index.md): Volatility modelling and forecasting.
